@@ -1,2 +1,2 @@
 #!/bin/bush
-mv *.html .. 
+cp -n *.html .. 
