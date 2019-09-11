@@ -1,2 +1,2 @@
-#!/bin/bush
-cp -u *.html .. 
+#!/bin/bash
+cp -u  *.html ..
