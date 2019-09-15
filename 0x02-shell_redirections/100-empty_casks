@@ -1,2 +1,2 @@
 #!/bin/bash
-find . .. -type d -type f -size 0b | ls -al
+find . .. -type d -type f -empty | ls -al
