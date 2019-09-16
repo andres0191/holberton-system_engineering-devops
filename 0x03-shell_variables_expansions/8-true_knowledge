@@ -1,2 +1,2 @@
 #!/bin/bash
-TRUEKNOWLEDG=1209 | echo
+echo ${120+TRUEKNOWLEDGE}
