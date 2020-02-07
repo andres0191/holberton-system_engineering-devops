@@ -3,13 +3,13 @@
 for ((count=1;count<100;i++)); do
     if [ $((count % 15)) -eq 0 ]
     then
-        printf "FizzBuzz\n"
+        echo "FizzBuzz"
     elif [ $((count % 3)) -eq 0 ]
     then
-        printf "Fizz\n"
+        echo "Fizz"
     elif [ $((count % 5)) -eq 0 ]
     then
-        printf "Buzz\n"
+        echo "Buzz"
     else
         echo "$count"
     fi
