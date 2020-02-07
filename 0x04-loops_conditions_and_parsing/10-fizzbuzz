@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script that displays numbers from 1 to 100
 for ((count=1;count<100;i++)); do
     if [ $((count % 15)) -eq 0 ]
     then

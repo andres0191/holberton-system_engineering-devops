@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#displays Holberton School 10 times, but for the 9th iteration, print Hi
 count=0
 while [ $count -lt 10 ]
 do

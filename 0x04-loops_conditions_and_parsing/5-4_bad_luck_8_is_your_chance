@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#script that loops from 1 to 10 and print bad luck in the 4to loop, good luck in the 8th loop
 count=0
 while [ $count -lt 10 ]
 do
