@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+count=0
+until [ $count -gt 10 ]
+do
+    printf "Holberton School\n"
+    let count=count+1
+done

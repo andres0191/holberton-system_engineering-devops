@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+count=1
+while [ $count -lt 21 ]
+do
+    printf "%d\n" "$count"
+    case $count in
+        4)
+            printf "bad luck from China\n"
+            ;;
+        9)
+            printf "bad luck from Japan\n"
+            ;;
+        17)
+            printf "bad luck from Italy\n"
+            ;;
+    esac
+    let count=count+1
+done
