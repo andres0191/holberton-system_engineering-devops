@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+for ((count=1;count<100;i++)); do
+    if [ $((count % 15)) -eq 0 ]
+    then
+        printf "FizzBuzz\n"
+    elif [ $((count % 3)) -eq 0 ]
+    then
+        printf "Fizz\n"
+    elif [ $((count % 5)) -eq 0 ]
+    then
+        printf "Buzz\n"
+    else
+        echo "$count"
+    fi
+    ((count++))
+done
