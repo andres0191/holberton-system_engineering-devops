@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#displays to infinity and beyond indefinitely
+if true;
+then
+    printf "To infinity and beyond"
+    sleep 2
+fi
