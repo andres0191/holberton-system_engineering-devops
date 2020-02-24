@@ -43,7 +43,7 @@ puts "Phone Num : #{phone}"
 phone = phone.gsub!(/\D/, "")    
 puts "Phone Num : #{phone}"
 ```
-# This will produce the following result:
+### This will produce the following result:
 ```
 Phone Num : 2004-959-559
 Phone Num : 2004959559
