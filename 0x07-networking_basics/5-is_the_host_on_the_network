@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#script that pings an IP address passed as an argument.
+SITIO1=8.8.8.8 # DNS de Google principal
+
+if if [ $respuesta1 -eq 1 ];
+then
+	ping -c 5 "$respuesta1 -eq 1"
+else
+	print"Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
