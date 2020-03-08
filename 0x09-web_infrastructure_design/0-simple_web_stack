@@ -1,0 +1,34 @@
+https://drive.google.com/drive/folders/1b_0bkdU7YnfjFvPjej6p_1tgT8o5_Ffh?usp=sharing
+
+What is a server?
+A server is a central repository where the programmer maintains and accesses information and computer programs within the network. The web server and the application server are types of servers that are used to deliver sites and, therefore, the latter deals with the operations of applications performed between users and applications.
+In Hardware, a web server is a computer that stores the web service software and component files of a website (for example, HTML documents, images, CSS style sheets and JS files). It is connected to the internet and supports the exchange of physical data with other devices connected to the web.
+On the software side, a web server includes several parts that control how web users access hosted files, at least one HTTP server. An HTTP server is software that includes URLs (web addresses) and HTTP (the protocol your browser uses to view web pages). You can access it through the domain names of the websites that stores and delivers its content to the end user's device.
+
+What is the role of the domain name?
+The domain is the unique name with which a Web page or a Web site is identified, within the vast sea of the Network. In this particular case the domain name is foobar.com.
+
+What type of DNS registration www is at www.foobar.com?
+For www.foobar.com the DNS record is the A record, which is the record used to point a domain or subdomain to an IP address. This record is used to translate names of hosting servers to IPv4 addresses.
+
+What is the role of the web server?
+Cover the web container accepting the data request and sending the specified documents. The web server can be a program or a computer where online content is saved. Essentially, the web server is used to host sites, however, there are different web servers such as storage, FTP, email, etc.
+There are 2 types:
+	Static web server, which consists of a computer with an HTTP server. It is called static because the server sends its hosted files as is to your browser.
+	Dynamic web server consisting of a static web server plus additional software, more commonly an application server and a database. It is called dynamic because the application server updates the hosted files before sending them to your browser through the HTTP server.
+
+In this case, a Nginx web server is used, which is an open source web server that can be used as a reverse proxy server, HTTP cache and load balancer. Some high-profile companies that use Nginx include Autodexk, Atlassian, Intuit, T-Mobile, GitLab, DuckDuckGo, Microsoft, IBM, Google, Adobe, etc ... Nginx is designed to offer low memory usage and high concurrency. Instead of creating new processes for each web request, Nginx uses an asynchronous event-based approach where requests are handled in a single thread. With Nginx, a master process can control multiple work processes. The master process maintains the work processes, and these are what make the actual processing.
+Some common features seen in Nginx include:
+	1.	Reverse proxy with cache
+	2.	IPv6
+	3.	Load balancing
+	4.	FastCGI support with caching
+	5.	Websockets
+	6.	Management of static files, index files and auto indexing
+	7.	TLS / SSL with SIN
+
+What is the role of the application server?
+Application servers organize the runtime environment for business applications. The application server can be a reasonable server that means how to set up the operating system, host applications and services for users, IT services and organization. Examples of application server can be Weblogic, JBoss, Websphere, etc.
+
+What is the role of the database?
+It allows the collection of information that is organized so that it can be easily accessed, managed and updated. Computer databases often contain aggregations of records or data files, which contain information about sales transactions or interactions with specific customers. In a relational database, digital information about a specific client is organized into rows, columns and tables that are indexed to facilitate the search for relevant information through SQL or NoSQL queries. Normally, the database admin provides users with the ability to control read / write access, specify report generation and analyze usage. Some databases offer compliance with ACID (Atomicity, Consistency, Isolation and Durability) to ensure that the data is consistent and that the transactions are completed.
