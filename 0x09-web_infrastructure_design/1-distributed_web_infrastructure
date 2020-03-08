@@ -1,0 +1,26 @@
+https://drive.google.com/drive/folders/1IMLZfWUaU3e9v-fLuHxZZgTy8gfQUqxa?usp=sharing
+
+Por cada elemento adicional, por qué lo está agregando?
+
+With what distribution algorithm your load balancer is configured and how it works
+Round Robin Algorithm: The server supports requests sequentially. after sending the
+request to the last server, start again from the first server. This algorithm is used.
+when the servers have the same specifications and there are not many connections
+persistent
+
+Does your load balancer allow an Active-Active or Active-Passive configuration, explain the difference between the two
+An active / passive configuration will offer you many advantages, so consider buying a pair of balancers
+load and configure them in H / A mode. When this is done, the main load balancer distributes the traffic of
+network to the most appropriate server, while the second load balancer works in listening mode to monitor
+constantly the performance of the primary load balancer and is ready at any time to intervene and
+take charge of load balancing tasks in case the main load balancer fails.
+
+How a main replication database cluster (master-slave) works
+The process of replicating a database consists of replicating update queries (both DML and DDL)
+in a master database (master) on one or several slave databases, so that we have a copy
+of them over time.
+
+MySQL supports asynchronous unidirectional replication, that is, the update queries executed in the master are
+replicated on slave servers. This replication is done transparently. It is also instantaneous if the
+Slave servers are up and in replication state. Data modifications must always be made
+In the master, if you want to be able to modify the data in any database you will have to go to other solutions such as MySQL Cluster.
