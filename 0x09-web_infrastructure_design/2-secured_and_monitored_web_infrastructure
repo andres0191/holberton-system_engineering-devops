@@ -1,36 +1,39 @@
 https://drive.google.com/drive/folders/1DqaeXMvNj9TUBj2Zvc5caiU5DqApml_p?usp=sharing
 
-Por cada elemento adicional, por qué lo está agregando
+What are firewalls for?
 
-¿Para qué sirven los firewalls?
-Es un sistema de seguridad de red isenado para evitar el acceso no autorizado a o 
-desde una red privada. Se pueden implementar como hardware y software. Se usan 
-especialmente para proteger el acceso a las intranets. todos los mensajes que ingresan
-o salen de la intranet, pasan a traves del firewall, quien examina cada mensaje y bloquea
-los que no cumplen con los criterios de seguridad especificos.
+It is a network security system designed to prevent unauthorized access to or
+From a private network. They can be implemented as hardware and software. Are used
+especially to protect access to intranets. all incoming messages
+or leave the intranet, pass through the firewall, who examines each message and blocks
+those that do not meet the specific safety criteria.
 
-¿Por qué se sirve el tráfico a través de HTTPS?
-Sirve porque permite que todas las comnicaciones entre su navegador
-y el sitio web estan encriptadas. HTTPS se usa a menudo para proteger transacciones altamente
-confidenciales en liinea, como banca en linea y formularios de pedido de comrpas en linea. 
-Los navegadores web tambien muestran un icono de candado en la barra de direcciones para indicar
-visualmente que una conexion HTTPS esta vigente.
+Why is traffic served over HTTPS?
 
-Para qué se utiliza el monitoreo
-El monitoreo de software observara las metricas de la computadora, las registrara y emitira
-una alerta si algo es insual o eso podria hacer que la computadora no funcione de manera correcta.
+It serves because it allows all communications between your browser
+and the website are encrypted. HTTPS is often used to protect transfers highly
+confidential online, such as online banking and online order forms.
+Web browsers also indicate a lock icon in the address bar to indicate
+visually that an HTTPS connection is in effect.
 
-Cómo la herramienta de monitoreo está recolectando datos
-Por medio del registro que realiza secuencialmente al estar activo.
+What is monitoring used for?
+The software monitoring will observe the metrics of the computer, record them and issue
+An alert if something is unusual or that could cause the computer to not work properly.
 
-Explica qué hacer si deseas monitorear el QPS de tu servidor web
+How the monitoring tool is collecting data
+By means of the register that it realizes sequentially when being active.
 
+Explain what to do if you want to monitor the QPS of your web server
+A monitor must be placed on the load balancer after the servers and before
+of the App Server to monitor the requirements and their response
 
-¿Por qué la terminación de SSL en el nivel del equilibrador de carga es un problema?
+Why is SSL termination at the load balancer level a problem?
+It would not be a problem, in fact it is good to have SSl in the load balancer to protect the information in the communication sections.
 
+Why having a single MySQL server capable of accepting writes is a problem
+Because not having a backup server if the maximum number of requests is exceeded, it would most likely fail to overload.
 
-Por qué tener un solo servidor MySQL capaz de aceptar escrituras es un problema
-
-
-Por qué tener servidores con los mismos componentes (base de datos, servidor web y servidor
-de aplicaciones) podría ser un problema
+Why have servers with the same components (database, web server and server
+of applications) could it be a problem?
+Because it would be something less optimal. Both will have a large amount of consumption in resources such as RAM. Usually
+This master configuration has the master server, while the slave servers serve as backup.
