@@ -1,0 +1,36 @@
+https://drive.google.com/drive/folders/1DqaeXMvNj9TUBj2Zvc5caiU5DqApml_p?usp=sharing
+
+Por cada elemento adicional, por qué lo está agregando
+
+¿Para qué sirven los firewalls?
+Es un sistema de seguridad de red isenado para evitar el acceso no autorizado a o 
+desde una red privada. Se pueden implementar como hardware y software. Se usan 
+especialmente para proteger el acceso a las intranets. todos los mensajes que ingresan
+o salen de la intranet, pasan a traves del firewall, quien examina cada mensaje y bloquea
+los que no cumplen con los criterios de seguridad especificos.
+
+¿Por qué se sirve el tráfico a través de HTTPS?
+Sirve porque permite que todas las comnicaciones entre su navegador
+y el sitio web estan encriptadas. HTTPS se usa a menudo para proteger transacciones altamente
+confidenciales en liinea, como banca en linea y formularios de pedido de comrpas en linea. 
+Los navegadores web tambien muestran un icono de candado en la barra de direcciones para indicar
+visualmente que una conexion HTTPS esta vigente.
+
+Para qué se utiliza el monitoreo
+El monitoreo de software observara las metricas de la computadora, las registrara y emitira
+una alerta si algo es insual o eso podria hacer que la computadora no funcione de manera correcta.
+
+Cómo la herramienta de monitoreo está recolectando datos
+Por medio del registro que realiza secuencialmente al estar activo.
+
+Explica qué hacer si deseas monitorear el QPS de tu servidor web
+
+
+¿Por qué la terminación de SSL en el nivel del equilibrador de carga es un problema?
+
+
+Por qué tener un solo servidor MySQL capaz de aceptar escrituras es un problema
+
+
+Por qué tener servidores con los mismos componentes (base de datos, servidor web y servidor
+de aplicaciones) podría ser un problema
