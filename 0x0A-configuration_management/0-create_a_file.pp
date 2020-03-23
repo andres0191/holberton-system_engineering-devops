@@ -1,8 +1,7 @@
-
-file{"/tmp/archivo":
-	content => "I love Puppet",
-	ensure  => present,
-	mode    => 744,
-	owner   => www-data,
-	group   => www-data;
-	}
+# Create a file in /tmp with messege I love
+file{ '/tmp/holberton':
+    content => 'I love Puppet',
+    mode    => '0744',
+    owner   => www-data,
+    group   => www-data;
+    }
