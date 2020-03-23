@@ -1,0 +1,23 @@
+Diagram:
+
+https://drive.google.com/drive/folders/12sKK0Tbz1-Oy72YYio96JlFGQGVSuicC?usp=sharing
+
+Application server vs web server:
+
+Web server:
+The web server covers only the web container
+It is useful or suitable for static content
+Consume or use less resources
+Organize the execution environment for web apps
+Multiple threading is not supported
+The capacity is lower than that of the app server
+HTML and HTTP protocols are used
+
+App server:
+It covers the web container and the EJB container
+It is equipped for dynamic content
+Use more resources
+Organize the runtime environment for business app
+multiple threading is supported
+The service capacity is greater than the web server
+GUI and HTTP and RCP / RMI protocols are used
