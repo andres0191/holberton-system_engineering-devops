@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Now that you have successfully connected to your server, we would also like to join the party.
+
+cat ~/.ssh/id_rsa.pub | ssh -i ~/.ssh/holberton ubuntu@34.73.62.124 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
