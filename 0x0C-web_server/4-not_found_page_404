@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Configure your Nginx server to have a custom 404 page
+# that contains the string Ceci n'est pas une page.
+# https://do.co/2QNHRXl
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Holberton School" | sudo tee /var/www/html/index.nginx-debian.html
+sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://twitter.com/andres0191/ permanent;' /etc/nginx/sites-enabled/default
+sed -i '/listen 80 default_server/a error_page 404 /custom_404.html; location = /custom_404.html {root /usr/share/nginx/html;\n internal;}' /etc/nginx/sites-enabled/default
+sudo service nginx start
