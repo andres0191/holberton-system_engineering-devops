@@ -4,9 +4,13 @@
 #should also include resources in your manifest to perform a 301
 #redirect when querying /redirect_me.
 
+class nginx {
+  package { 'nginx':
+    ensure => absent,
+  }
 package { 'nginx':
-  ensure => install,
-  name   => 'nginx',
+  ensure  => installed,
+  require => Package['ngingx'],
 }
 
 file { '/var/www/html/index.html':
