@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-service nginx restart
+find /etc/nginx/sites-available/ -name "default" -print | xargs sed -i "s/listen * default_server;/listen 80 default_server;/g"
+find /etc/nginx/sites-enabled/ -name "default" -print | xargs sed -i "s/listen * default_server;/listen 80 default_server;/g"
