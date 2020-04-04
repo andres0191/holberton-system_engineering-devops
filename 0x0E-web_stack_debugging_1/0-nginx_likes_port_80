@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sudo sed -i "s/listen 8080 default_server;/listen 80 default_server;/g" /etc/nginx/sites-enabled/default | sudo sed -i "s/listen [::]:8080 default_server ipv60nly=on;/s/listen [::]:80 default_server ipv60nly=on;/g" /etc/nginx/sites-enabled/default | sudo service nginx restart
+sudo sed -i "s/listen 8080 default_server;/listen 80 default_server;/g" /etc/nginx/sites-enabled/default && sudo sed -i "s/listen [::]:8080 default_server ipv60nly=on;/s/listen [::]:80 default_server ipv60nly=on;/g" /etc/nginx/sites-enabled/default && sudo service nginx restart
