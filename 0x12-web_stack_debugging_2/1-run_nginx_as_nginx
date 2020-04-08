@@ -1,4 +1,4 @@
 #!/bin/bash/env bash
 # Fix this container so that Nginx is running as the nginx user.
 sudo adduser --system --no-create-home --disabled-login --disabled-password --group nginx
-su - ngingx
+su - nginx
