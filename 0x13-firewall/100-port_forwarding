@@ -1,0 +1,3 @@
+#!/bin/bash
+#
+ssh -L 8080/tcp:www.debian.org:80 ubuntu@34.73.62.124

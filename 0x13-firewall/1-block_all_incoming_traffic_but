@@ -1,0 +1,12 @@
+#!/bin/bash
+# Let’s install the ufw firewall and setup a few rules on web-01.
+# Install ufw
+# Configure ufw so that it blocks all incoming traffic
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+# Configure UFW to allow the output of ports 443, 80 and 22
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw allow 22/tcp
+# Active ufw
+sudo ufw -y enable
