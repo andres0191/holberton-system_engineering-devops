@@ -2,3 +2,51 @@
 # “Terminating SSL on HAproxy” means that HAproxy
 # is configured to handle encrypted traffic,
 # unencrypt it and pass it on to its destination.
+vi /etc/haproxy/haproxy.cfg      """ revisa que tenga bind *:80  """"
+sudo add-apt-repository -y ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install -y certbot
+sudo vim /etc/cron.d/certbot    """" opcional solo para ver """"
+sudo vi /etc/haproxy/haproxy.cfg   """ abra archivo y actualice """ 
+    frontend fe-scalinglaravel """ no crear nuevo frontend, estas lineas van en el que uds tiene """
+        bind *:80
+        acl letsencrypt-acl path_beg /.well-known/acme-challenge/ """" add this line"""
+        use_backend letsencrypt-backend if letsencrypt-acl         """ add this line"""
+        default_backend be-scalinglaravel """this is the pre-existing backend, dejarlo como esta """
+ """    Crear adicional  backend, deje el que ya tiene este es uno nuevo  """"
+     backend letsencrypt-backend    """ add this line """
+        server letsencrypt 127.0.0.1:8888    """ add this line """
+sudo service haproxy restart
+sudo certbot certonly --standalone -d www.maryg.tech --non-interactive --agree-tos --email mlgomez230@hotmail.com --http-01-port=8888
+"""Aqui debe salir el mensaje the felicitaciones!!"""
+sudo mkdir -p /etc/ssl/www.maryg.tech
+sudo su
+sudo cat /etc/letsencrypt/live/www.maryg.tech/fullchain.pem /etc/letsencrypt/live/www.maryg.tech/privkey.pem | sudo tee /etc/ssl/www.maryg.tech/www.maryg.tech.pem
+""" aca vemos la llave privada """ 
+sudo vim /etc/ssl/www.maryg.tech/www.maryg.tech.pem   """ aca tienes la llave privada para que sepas"""
+sudo vi /etc/haproxy/haproxy.cfg   """adicionar listening port 443""""
+    frontend fe-scalinglaravel (front in file)
+        bind *:80
+        bind *:443 ssl crt /etc/ssl/www.maryg.tech/www.maryg.tech.pem  """ adicionar linea"""
+        # Redirect if HTTPS is *not* used
+        redirect scheme https code 301 if !{ ssl_fc }      """adicionar linea""""
+        acl letsencrypt-acl path_beg /.well-known/acme-challenge/
+        use_backend letsencrypt-backend if letsencrypt-acl
+sudo service haproxy reload
+""" ahora el browser deberia mostrar el certificado """
+Pasos para renovar certificado
+sudo certbot renew  """entrega error """
+===== script para renovacion =====
+cat > /opt/update-certs.sh
+#!/usr/bin/env bash
+# Renew the certificate
+certbot renew --force-renewal --tls-sni-01-port=8888
+# Concatenate new cert files, with less output (not using tee)
+bash -c "cat /etc/letsencrypt/live/www.maryg.tech/fullchain.pem /etc/letsencrypt/live/www.maryg.tech/privkey.pem > /etc/ssl/www.maryg.tech/www.maryg.tech.pem"
+# Reload HAProxy
+service haproxy reload
+============================
+sudo bash /opt/update-certs.sh
+sudo vi /etc/cron.d/certbot
+    #0 */12 *** root test -x /usr/bin/certbot -a \! -d /run/systemd .....................  """ comentar esta linea"""
+    0 0 1 * * root bash /opt/update-certs.sh     """ adicionar esta linea """
