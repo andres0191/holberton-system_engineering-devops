@@ -18,4 +18,3 @@ then
 else
     info_dom_and_subdom "$1" "$2"
 fi
-:()
