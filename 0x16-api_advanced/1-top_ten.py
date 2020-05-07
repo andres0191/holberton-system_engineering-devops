@@ -5,12 +5,14 @@
 """
 import requests
 
+
 def top_ten(subreddit):
+    """ function that return the first 10 hot post"""
     url = 'https://www.reddit.com/r/{}/.json'
     headers = {'user-agent': 'X-Modhash'}
     url_format = requests.get(url.format(subreddit), headers=headers).json()
     if (url_format):
         for i in range(10):
             title = url_format['data']['children'][i]['data']['title']
-            print (title)
+            print(title)
     return (None)
