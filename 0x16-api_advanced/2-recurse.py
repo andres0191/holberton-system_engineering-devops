@@ -12,13 +12,17 @@ def recurse(subreddit, hot_list=[], after=None):
     """function that realized get for reddit"""
     url = 'https://www.reddit.com/r/{}/.json'
     headers = {'user-agent': 'X-Modhash'}
-    limit = {'limit': 101}
+    limit = {'limit': 100}
     if after is not None:
         limit['after'] = after
     url_format = requests.get(url.format(subreddit),
-                              headers=headers, params=limit).json()
-    for i in range(len(url_format['data']['children'])):
-        hot_list.append(url_format['data']['children'][i]['data']['title'])
-    if url_format['data']['after'] is not None:
-        recurse(subreddit, hot_list, url_format['data']['after'])
-    return hot_list
+                              headers=headers, params=limit)
+    request_json =  url_format.json()
+    if url_format.status_code is 200:
+        for i in range(len(request_json['data']['children'])):
+            hot_list.append(request_json['data']['children'][i]['data']['title'])
+        if request_json['data']['after'] is not None:
+            recurse(subreddit, hot_list, request_json['data']['after'])
+        return hot_list
+    else:
+        return None
