@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+def recurse(subreddit, hot_list=[])def recurse(subreddit, hot_list=[])
 """Write a function that queries the Reddit
    API and prints the titles of the first 10
    hot posts listed for a given subreddit
