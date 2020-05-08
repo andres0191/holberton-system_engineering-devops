@@ -11,8 +11,9 @@ def top_ten(subreddit):
     url = 'https://www.reddit.com/r/{}/.json'
     headers = {'user-agent': 'X-Modhash'}
     url_format = requests.get(url.format(subreddit), headers=headers).json()
-    if (url_format):
+    try:
         for i in range(10):
             title = url_format['data']['children'][i]['data']['title']
             print(title)
-    return (None)
+    except:
+        print(None)
