@@ -17,10 +17,11 @@ def recurse(subreddit, hot_list=[], after=None):
         limit['after'] = after
     url_format = requests.get(url.format(subreddit),
                               headers=headers, params=limit)
-    request_json =  url_format.json()
+    request_json = url_format.json()
     if url_format.status_code is 200:
         for i in range(len(request_json['data']['children'])):
-            hot_list.append(request_json['data']['children'][i]['data']['title'])
+            hot_list.append(request_json['data']
+                            ['children'][i]['data']['title'])
         if request_json['data']['after'] is not None:
             recurse(subreddit, hot_list, request_json['data']['after'])
         return hot_list
