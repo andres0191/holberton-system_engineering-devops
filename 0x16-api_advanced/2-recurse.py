@@ -12,7 +12,7 @@ def recurse(subreddit, hot_list=[], after=None):
     """function that realized get for reddit"""
     url = 'https://www.reddit.com/r/{}/.json'
     headers = {'user-agent': 'X-Modhash'}
-    limit = {'limit': 100}
+    limit = {'limit': 101}
     if after is not None:
         limit['after'] = after
     url_format = requests.get(url.format(subreddit),
