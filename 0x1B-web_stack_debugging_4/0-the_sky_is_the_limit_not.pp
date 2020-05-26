@@ -1,7 +1,9 @@
 #Sky is the limit, let's bring that limit higher
-exec { 'limit':
-    command => 'sed -ri "s/(ULIMIT=\"-n) [0-9]+/\1 10000/" /etc/default/nginx',
+exec { 'not limit':
+  provider => shell,
+  command  => 'sed -i "s/15/15000/g" /etc/default/nginx',
 }
-exec { 'restart':
-    command => 'service nginx restart',
+exec { 'restart nginx':
+  provider => shell,
+  command  => 'sudo service nginx restart',
 }
