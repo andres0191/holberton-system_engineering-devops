@@ -51,6 +51,6 @@ Teams use practices to automate processes that have previously been manual and t
 
 **Author**
 
-- [Andres Garcia Github](https://github.com/andres0191)
-- [Andres Garcia Twitter](https://twitter.com/andres0191)
-- [Andres Garcia Linkedin](https://linkedin.com/anfegar)
+# Andres Felipe Garcia Rendon
+
+- [Github](https://github.com/andres0191) - [Twitter](https://twitter.com/andres0191) - [Linkedin](https://linkedin.com/anfegar)
